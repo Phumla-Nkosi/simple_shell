@@ -1,10 +1,8 @@
 #include "shell.h"
-
 /**
  * clear_info - Starts info_t struct
  * @info: struct address
  */
-
 void clear_info(info_t *info)
 {
 info->arg = NULL;
@@ -20,6 +18,7 @@ info->argc = 0;
 void set_info(info_t *info, char **av)
 {
 int i = 0;
+
 info->fname = av[0];
 if (info->arg)
 {
@@ -33,7 +32,8 @@ info->argv[0] = _strdup(info->arg);
 info->argv[1] = NULL;
 }
 }
-for (i = 0; info->argv && info->argv[i]; i++);
+for (i = 0; info->argv && info->argv[i]; i++)
+;
 info->argc = i;
 replace_alias(info);
 replace_vars(info);

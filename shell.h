@@ -70,7 +70,7 @@ int argc;
 unsigned int line_count;
 int err_num;
 int linecount_flag;
-char *fname
+char *fname;
 list_t *env;
 list_t *history;
 list_t *alias;
@@ -84,9 +84,9 @@ int histcount;
 } info_t;
 #define INFO_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-            0, 0, 0}
+		 0, 0, 0}
 /**
-* struct builtin - moves to the buttlin 
+* struct builtin - moves to the buttlin
 * @type: the builtin command flag
 * @func: the function
 */
@@ -96,7 +96,7 @@ char *type;
 int (*func)(info_t *);
 } builtin_table;
 /* toem_shloop.c */
-int hsh(info_t , char *);
+int hsh(info_t, char *);
 int find_builtin(info_t *);
 void find_cmd(info_t *);
 void fork_cmd(info_t *);
@@ -154,11 +154,11 @@ int _myhistory(info_t *);
 int _myalias(info_t *);
 /*toem_getline.c */
 ssize_t get_input(info_t *);
-int _getline(info_t , char *, size_t *);
+int _getline(info_t, char *, size_t *);
 void sigintHandler(int);
 /* toem_getinfo.c */
 void clear_info(info_t *);
-void set_info(info_t , char *);
+void set_info(info_t, char *);
 void free_info(info_t *, int);
 /* toem_environ.c */
 char *_getenv(info_t *, const char *);
