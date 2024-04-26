@@ -1,8 +1,10 @@
 #include "shell.h"
+
 /**
- * bfree - makes room fro the pointer in the program
+ * bfree - frees a pointer and NULLs the address
  * @ptr: address of the pointer to free
- * Return: if the is shape show 1 if not the 0
+ *
+ * Return: 1 if freed, otherwise 0.
  */
 int bfree(void **ptr)
 {
